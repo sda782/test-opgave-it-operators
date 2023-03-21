@@ -3,7 +3,7 @@ using test_opgave_it_operators.models;
 
 namespace test_opgave_it_operators.utils {
     public class JsonHelper {
-        private static readonly string carsJsonPath = @"C:\Users\Andreas\Documents\Arbejde\IT Operators\test-opgave-it-operators\data\cars.json";
+        private static readonly string carsJsonPath = @".\data\cars.json";
         public static List<Car> GetCarsFromJson() {
             string jsonString = File.ReadAllText(carsJsonPath);
             List<Car>? cars = JsonConvert.DeserializeObject<List<Car>>(jsonString);
